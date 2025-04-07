@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="[Salon Name] - Professional salon services in [City]">
+  <title>Urban Vibes</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function showBookingForm() {
+      document.getElementById('booking-form').classList.remove('hidden');
+      document.getElementById('booking-success').classList.add('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-pink-200 p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Urban Vibes</h1>
+      <nav>
+        <ul class="flex gap-4">
+          <li><a href="index.html" class="hover:text-pink-600">Home</a></li>
+          <li><a href="about.html" class="hover:text-pink-600">About</a></li>
+          <li><a href="services.html" class="hover:text-pink-600">Services</a></li>
+          <li><a href="contact.html" class="hover:text-pink-600">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-pink-100">
+    <h2 class="text-4xl font-semibold mb-4">Welcome to Urban Vibes</h2>
+    <p class="text-lg mb-6">Experience beauty and care like never before.</p>
+    <button onclick="showBookingForm()" class="bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Book an Appointment</button>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking-form" class="hidden py-12 px-4 max-w-2xl mx-auto">
+    <h3 class="text-2xl font-bold mb-6 text-center">Book an Appointment</h3>
+    <form action="https://formspree.io/f/xldjowne" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded" />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required class="w-full p-3 border border-gray-300 rounded" />
+      <input type="date" name="date" required class="w-full p-3 border border-gray-300 rounded" />
+      <select name="service" required class="w-full p-3 border border-gray-300 rounded">
+        <option value="">Select a Service</option>
+        <option value="Haircut & Styling">Haircut & Styling</option>
+        <option value="Coloring & Highlights">Coloring & Highlights</option>
+        <option value="Facials & Skincare">Facials & Skincare</option>
+        <option value="Manicure & Pedicure">Manicure & Pedicure</option>
+        <option value="Massage Therapy">Massage Therapy</option>
+        <option value="Bridal & Events">Bridal & Events</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Additional Notes (Optional)" class="w-full p-3 border border-gray-300 rounded"></textarea>
+      <button type="submit" class="bg-pink-500 text-white py-2 px-6 rounded hover:bg-pink-600">Submit</button>
+    </form>
+    <p id="booking-success" class="hidden mt-4 text-green-600 font-semibold text-center">Thank you! Your appointment request has been sent.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-10">Our Services</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Haircuts & Styling</h4>
+        <p class="text-gray-600">Trendy cuts, blowouts, and styling tailored to your look.</p>
+        <p class="mt-2 font-bold text-pink-500">$25 - $60</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Coloring & Highlights</h4>
+        <p class="text-gray-600">Balayage, root touch-ups, and full color services.</p>
+        <p class="mt-2 font-bold text-pink-500">$50 - $120</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Facials & Skincare</h4>
+        <p class="text-gray-600">Deep cleansing, rejuvenation, and glow-boosting treatments.</p>
+        <p class="mt-2 font-bold text-pink-500">$30 - $80</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Manicure & Pedicure</h4>
+        <p class="text-gray-600">Classic, gel, or spa treatments for hands and feet.</p>
+        <p class="mt-2 font-bold text-pink-500">$20 - $50</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Massage Therapy</h4>
+        <p class="text-gray-600">Relaxing and therapeutic massages to ease tension.</p>
+        <p class="mt-2 font-bold text-pink-500">$40 - $100</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Bridal & Events</h4>
+        <p class="text-gray-600">Custom makeup and hairstyling for your special day.</p>
+        <p class="mt-2 font-bold text-pink-500">Custom Packages</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 px-4 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-10">Contact Us</h3>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div>
+        <h4 class="text-xl font-semibold mb-4">Get in Touch</h4>
+        <p class="mb-2">📍 3953 24th St, San Francisco, CA 94114, United States</p>
+        <p class="mb-2">📞 (123) 456-7890</p>
+        <p class="mb-4">📧 urbanvibes@salon.com</p>
+        <iframe
+  class="w-full h-64 rounded"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.2927582232886!2d-122.43334352413858!3d37.75129857976562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e637e1d0c13%3A0xa18285e0ab1a871f!2sUrban%20Soul%20Salon!5e0!3m2!1sen!2sin!4v1712489821353!5m2!1sen!2sin"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+      
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-4">Send a Message</h4>
+        <form action="https://formspree.io/f/xldjowne" method="POST" class="space-y-4">
+          <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded" />
+          <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded" />
+          <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded"></textarea>
+          <button type="submit" class="bg-pink-500 text-white py-2 px-6 rounded hover:bg-pink-600">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 [Urban Vibes]. All rights reserved.</p>
+  </footer>
+</body>
+</html>
